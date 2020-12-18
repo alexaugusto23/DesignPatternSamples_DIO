@@ -47,7 +47,7 @@ namespace DesignPatternSamples.WebAPI
             services.AddDependencyInjection()
                 .AddAutoMapper();
 
-            /*Cache distribuído FAKE*/
+            /*Cache distribuï¿½do FAKE*/
             services.AddDistributedMemoryCache();
             
             services.AddControllers();
@@ -73,6 +73,7 @@ namespace DesignPatternSamples.WebAPI
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "API");
+                c.RoutePrefix = string.Empty;
             });
             #endregion
 
